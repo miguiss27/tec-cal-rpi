@@ -23,11 +23,4 @@ void loop()
       digitalWrite(1, HIGH);
     }
   }
-  if((341<analogRead(A3)<682) && (341<analogRead(A2)<682)){
-  	digitalWrite(2, HIGH);
-  } else {
-    digitalWrite(2, LOW);
-  }  
-  
-  delay(10); // Delay a little bit to improve simulation performance
 }
