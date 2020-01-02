@@ -9,17 +9,17 @@ void setup()
 
 void loop()
 {
-  if (analogRead(A2) > 682) {
+  if (analogRead(A2) > 512) {
     digitalWrite(0, HIGH);
   } else {
-    if (analogRead(A2) < 341) {
+    if (analogRead(A2) < 512) {
       digitalWrite(0, LOW);
     }
   }
-  if (analogRead(A3) > 682) {
+  if (analogRead(A3) > 512) {
     digitalWrite(1, HIGH);
   } else {
-    if (analogRead(A3) < 341) {
+    if (analogRead(A3) < 512) {
       digitalWrite(1, LOW);
     }
   }
