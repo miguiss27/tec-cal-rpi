@@ -6,14 +6,15 @@ import numpy
 #import sympy
 import subprocess as sub
 #import sys
-#import time
+import time
+import keyboard
 
 #define variables
 
 res=""
 exe=""
 cmd=""
-
+timsl=0.1
 
 #define redirections
 
@@ -100,10 +101,11 @@ while qut!=True:
 
     showmenu(mn,cmd,res)
     res=""
-      
-    key=input()
+    key=keyboard.read_key()
+#    key=input()
 #    key=str(sys.stdin.read(1))
     sub.call("clear")
+    time.sleep(timsl)
 
 
     lng=len(cmd)
@@ -131,8 +133,10 @@ while qut!=True:
     
     if (cmd.find("emulationstation")>=0):
         sub.call("emulationstation")
+        sub.call("clear")
     if (cmd.find("startx")>=0):
         sub.call("startx")
+        sub.call("clear")
     if (cmd.find("back")>=0):
         mn=redba[mn]
     if (cmd.find("next")>=0):
