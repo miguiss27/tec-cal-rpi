@@ -1,12 +1,12 @@
 #import libraries
 
 import math
-import matplotlib
+#import matplotlib
 import numpy
-import sympy
+#import sympy
 import subprocess as sub
-import sys
-import time
+#import sys
+#import time
 
 #define variables
 
