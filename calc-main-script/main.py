@@ -1,4 +1,4 @@
- #import libraries
+#import libraries
 
 import math
 #import matplotlib
@@ -140,10 +140,10 @@ while qut!=True:
         mn="m0"
     
     if (cmd.find("emulationstation")>=0):
-        sub.call(["/usr/bin/env", "/home/pi/calc-scripts/startx.sh"])
+        sub.call(["su", "pi", "-c", "emulationstation"])
         sub.call("clear")
     if (cmd.find("startx")>=0):
-        sub.call(["/usr/bin/env", "/home/pi/calc-scripts/startx.sh"])
+        sub.call(["su", "pi", "-c", "startx"])
         sub.call("clear")
     if (cmd.find("back")>=0):
         mn=redba[mn]
