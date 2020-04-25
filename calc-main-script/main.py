@@ -92,6 +92,14 @@ def showmenu(menu, comand, result):
     print("///////////////////////////////////////////////////////////////////////////////")
     print("///////////////////////////////////////////////////////////////////////////////")
 
+#helper for presses
+
+def press(string):
+    for key in string:
+        keyboard.press(key)
+        time.sleep(0.001)
+        keyboard.release(key)
+
 #main execution
 
 
@@ -143,7 +151,15 @@ while qut!=True:
         sub.call(["su", "pi", "-c", "emulationstation"])
         sub.call("clear")
     if (cmd.find("startx")>=0):
-        sub.call(["su", "pi", "-c", "startx"])
+        keyboard.send('ctrl+alt+F5')
+        time.sleep(1)
+        press("miguiss")
+        keyboard.send('enter')
+        time.sleep(1)
+        press("pombriego9648")
+        keyboard.send('enter')
+        time.sleep(2)
+        sub.call(["startx", "--", "tty5"])
         sub.call("clear")
     if (cmd.find("back")>=0):
         mn=redba[mn]
@@ -154,9 +170,12 @@ while qut!=True:
     if (cmd.find("quit")>=0):
         qut=True
     if (cmd.find("delete")>=0):
-        cmd=cmd.replace("delete","")
-        cmd=cmd[:-(int(lcmd[-2]))]
-        lcmd=lcmd[:-1]
+        try:
+            cmd=cmd.replace("delete","")
+            cmd=cmd[:-(int(lcmd[-2]))]
+            lcmd=lcmd[:-1]
+        except:
+            cmd=cmd.replace("delete","")
 
         
     cmd=cmd.replace("basic","")      
