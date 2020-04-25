@@ -153,10 +153,10 @@ while qut!=True:
     if (cmd.find("startx")>=0):
         keyboard.send('ctrl+alt+F5')
         time.sleep(1)
-        press("miguiss")
+        press("pi")
         keyboard.send('enter')
         time.sleep(1)
-        press("pombriego9648")
+        press("raspi")
         keyboard.send('enter')
         time.sleep(2)
         sub.call(["startx", "--", "tty5"])
