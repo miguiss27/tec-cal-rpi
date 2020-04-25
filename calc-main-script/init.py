@@ -8,7 +8,3 @@ while a<10:
 	time.sleep(1)
 	keyboard.send('F11')
 	a+=1
-	
-	
-	
-	
