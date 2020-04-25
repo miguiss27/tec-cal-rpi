@@ -9,6 +9,6 @@
 * Mas menus
 * Mejora de redirecciones de menus
 * No necesita de usar intro
-* implementacion de la funcion para borrar
+* Implementacion de la funcion para borrar
 #### Caracteristicas del controlador:
 *En curso*
