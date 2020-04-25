@@ -151,15 +151,8 @@ while qut!=True:
         sub.call(["su", "pi", "-c", "emulationstation"])
         sub.call("clear")
     if (cmd.find("startx")>=0):
-        keyboard.send('ctrl+alt+F5')
-        time.sleep(1)
-        press("pi")
-        keyboard.send('enter')
-        time.sleep(1)
-        press("raspi")
-        keyboard.send('enter')
-        time.sleep(2)
-        sub.call(["startx", "--", "tty5"])
+        sub.call("lightdm")
+        keyboard.send('ctrl+alt+F1')
         sub.call("clear")
     if (cmd.find("back")>=0):
         mn=redba[mn]
