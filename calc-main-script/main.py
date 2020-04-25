@@ -178,15 +178,3 @@ while qut!=True:
 
 sub.call("clear")
 quit()
-
-
-
-
-
-
-
-
-
-
-
-
