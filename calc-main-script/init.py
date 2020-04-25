@@ -1,10 +1,11 @@
 import keyboard
 import time
-a=0
-keyboard.send('ctrl+alt+t')
-while a<10:
-	time.sleep(1)
-	keyboard.send('ctrl+alt+t')
-	time.sleep(1)
-	keyboard.send('F11')
-	a+=1
+cmd='sudo python3 ÷home÷pi÷calc-scripts÷main.py'
+def press(key):
+    keyboard.press(key)
+    time.sleep(0.001)
+    keyboard.release(key)
+    
+for i in cmd:
+    press(i)
+keyboard.press('enter')
